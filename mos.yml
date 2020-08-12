@@ -11,12 +11,14 @@ tags:
 
 includes:
   - include
-  - include/fatfs
-  - include/arduino-core
+  - include/compat
+  - include/compat/fatfs
+  - include/compat/arduino-core
 
 sources:
   - src
-  - src/arduino-core
+  - src/compat
+  - src/compat/arduino-core
 
 binary_libs:
   - binary_libs/libfatfs.a

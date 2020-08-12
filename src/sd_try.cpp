@@ -95,8 +95,7 @@ void setup_sdcard()
     uint64_t cardSize = SD.cardSize() / (1024 * 1024);
     LOG(LL_INFO, ("SD Card Size: %lluMB\n", cardSize));
 
-    writeFile(SD, "/hello.txt", "Hello ");
-    appendFile(SD, "/hello.txt", "World!\n");
+    writeFile(SD, "/tcu.txt", "It is chal raha hai!");
     LOG(LL_INFO, ("Total space: %lluMB\n", SD.totalBytes() / (1024 * 1024)));
     LOG(LL_INFO, ("Used space: %lluMB\n", SD.usedBytes() / (1024 * 1024)));
 }
