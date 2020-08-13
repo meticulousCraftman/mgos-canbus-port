@@ -1,10 +1,11 @@
-# Running SD.h library from Arduino on ESP32 running Mongoose OS
+# Running CAN Bus library from Arduino on ESP32 running Mongoose OS
+
+[Arduino library used](https://github.com/Seeed-Studio/CAN_BUS_Shield)
 
 This mongoose os app does not use the arduino-compat library provided by Mongoose OS. Instead, the source files, header files and static library files have been added from esp32-arduino project directly.
 
-This application was written for the primary reason of making SD Cards to work reliably on Mongoose OS. nvliu/sdlib was unable to mount the SD Card, after several futile attempts. I tested the ESP32 module using Arduino SD library and everything worked!
+This application makes use of arduino port that was used to [sdcard library](https://github.com/meticulousCraftman/mgos-sdcard-port).
 
-So for that reason, I ported the entire Arduino core that is required to run SD.h and FS.h files.
 
 ## Build command
 
@@ -30,4 +31,4 @@ foo@bar:~$ mos console --port /dev/ttyUSB0
 
 
 ## Output
-Remove the SD Card from your ESP32 board/SDCard module. Plug it into your computer to see a file named **hello.txt** with the contents `Hello World!` in it.
+This is RX code. Setup an Arduino that continosuly transmits data on CAN lines. For more information see [this tutorial](https://www.electronicshub.org/arduino-mcp2515-can-bus-tutorial/)
